@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DodgeGame</title>
+    <link rel="stylesheet" href="../css/dodgeGame.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="startScreen">
+            <h1>Dodge Game</h1>
+            <p>Tekan A/D atau ◄ ► untuk bergerak</p>
+            <p>Hindari rintangan yang jatuh</p>
+            <p>Selamat Bermain 😁😁😁</p>
+            <button id="startButton">MULAI</button>
+            <a href="../logout.php" class="logout">Logout</a>
+        </div>
+        
+        <div class="game-info hidden">
+            <div class="info-item">Skor: <span id="scoreDisplay">0</span></div>
+            <div class="info-item">Nyawa: <span id="livesDisplay">3</span></div>
+        </div>
+        <canvas id="canvasDodge" width="500" height="500"></canvas>
+        <div id="gameOver" class="hidden">
+            <h2>Game Over!</h2>
+            <p>Skor Akhir: <span id="finalScore"></span></p>
+            <p id="hasil" class="hasil"></p>
+            <button id="restartButton">Main Lagi</button>
+        </div>
+
+    </div>
+
+
+    <script src="../js/dodgeGame.js"></script>
+</body>
+
+</html>
