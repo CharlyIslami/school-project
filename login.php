@@ -22,13 +22,13 @@ if (isset($_POST['login'])) {
         }else if ($user['level'] === 'user') {
             header ("Location: dashboard/halaman_user.php");
             exit;
-        } else {
-            echo "<script>
-            alert('Username atau password salah!');
-            window.location.href = 'login.php';
-            </script>";
-            exit;
-        }
+        } 
+    } else {
+        echo "<script>
+        alert('Username atau passwordnya salah bro!');
+        window.location.href = 'login.php';
+        </script>";
+        exit;
     }
 }
 
