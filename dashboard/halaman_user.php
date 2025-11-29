@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']) || $_SESSION['level'] != 'user'){
-    header("Location: login.php");
+if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'user'){
+    header("Location: ../login.php");
     exit;
 }
 ?>
@@ -20,8 +20,8 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] != 'user'){
 <body>
     <h1>Selamat datang, <span class="p"><?= $_SESSION['username']; ?></span></h1>
     <p>Ini adalah halaman dashboard khusus untuk user.</p>
-    <a href="logout.php">Logout</a>
     <a href="../project/soal-soal.php">Klik aku untuk melihat soal-soal</a>
+    <a href="../logout.php">Logout</a>
     
 </body>
 </html>

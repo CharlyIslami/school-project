@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: ../login.php");
+    exit;
+}
+
+if ($_SESSION['level'] !== 'user') {
+    header("Location: ../dashboard/halaman_admin.php");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +64,7 @@
             </div>
         </section>
     </main> 
-    <a href="../logout.php" class="logout">Logout</a>
+    <a href="../dashboard/halaman_user.php" class="logout">Kembali</a>
 
 
 

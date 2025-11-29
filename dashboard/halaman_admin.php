@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']) || $_SESSION['level'] != 'admin'){
-    header("Location: login.php");
+if (!isset($_SESSION['username']) || $_SESSION['level'] !== 'admin'){
+    header("Location: ../login.php");
     exit;
 }
 ?>
@@ -20,8 +20,8 @@ if (!isset($_SESSION['username']) || $_SESSION['level'] != 'admin'){
 <body>
     <h1>Selamat datang, <span class="p"><?= $_SESSION['username']; ?></span></h1>
     <p>Ini adalah halaman dashboard khusus untuk admin.</p>
-    <a href="../logout.php">Logout</a>
     <a href="../project/dodgegame.php">Klik aku untuk memainkan game</a>
+    <a href="../logout.php">Logout</a>
     
 </body>
 </html>

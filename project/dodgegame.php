@@ -1,3 +1,9 @@
+<?php 
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +23,7 @@
             <p>Hindari rintangan yang jatuh</p>
             <p>Selamat Bermain 😁😁😁</p>
             <button id="startButton">MULAI</button>
-            <a href="../logout.php" class="logout">Logout</a>
+            <a href="../dashboard/halaman_admin.php" class="logout">Kembali</a>
         </div>
         
         <div class="game-info hidden">
@@ -30,6 +36,7 @@
             <p>Skor Akhir: <span id="finalScore"></span></p>
             <p id="hasil" class="hasil"></p>
             <button id="restartButton">Main Lagi</button>
+            <a href="../dashboard/halaman_admin.php" class="logout">Kembali</a>
         </div>
 
     </div>
