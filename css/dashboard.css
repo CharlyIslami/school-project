@@ -15,77 +15,71 @@ body {
     display: none;
 }
 
-h1 {
-    padding: 20px 30px;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 30px;
-    text-transform: uppercase;
-    animation: fadeIn 1s ease;
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e3a8a;
+    padding: 8px 30px;
+    margin: 10px 0;
+    animation: up 0.5s ease-out;
 }
 
-@keyframes fadeIn {
+@keyframes up {
     from {
         opacity: 0;
-        transform: translateY(30px);
-    } to {
+        transform: translateY(-100%);
+    }
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 20px;
-    animation: fadeInUp 1.5s ease 0.3s;
-    opacity: 0;
-    animation-fill-mode: forwards;
+.logo {
+    color: #4a80f6;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 10px 10px;
+    font-family: 'science gothic', sans-serif;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    } to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.p {
-    color: #60a5fa;
-}
-
-a {
-    display: block;
-    width: fit-content;
-    text-decoration: none;
-    color: #0b2540;
-    background: #bfdbfe;
-    padding: 20px 40px;
-    border-radius: 30px;
-    margin: 30px auto;
-    transition: all 0.5s ease-in-out;
-    animation: fade 2s ease 0.5s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    } to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-a:hover {
+.logo:hover {
+    transform: scale(1.05);
     color: white;
-    background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
-    transform: translateY(-3px);
 }
 
+ul {
+    display: flex;
+}
 
+li {
+    list-style: none;
+}
+
+.option {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: #6e9cff;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    color: white;
+    background: #222d4d;
+}
+
+.user-info {
+    color: #6e9cff;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.user-info:hover {
+    color: white;
+}

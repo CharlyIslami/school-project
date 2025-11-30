@@ -189,10 +189,6 @@ button:disabled {
     color: #DC2626;
 }
 
-.toast.success {
-    border-left: 5px solid #10B981;
-}
-
 .toast.icon {
     font-size: 24px;
 }
